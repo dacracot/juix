@@ -5,12 +5,13 @@
 	<xsl:output method="html" indent="yes"/>
 <!-- =========================================================================================== -->
 	<xsl:template match="juix-datepicker">
+		<xsl:param name="datepicker-options"/>
 		<tr>
 			<td>Date:</td>
 			<td>
 				<xsl:variable name="currentValue" select="string-join((@month, @day, @year), '/')"/>
 				<input type="text" id="datepicker{position()}"/>
-				<script xsl:expand-text="yes">initDP('#datepicker{position()}', '{$currentValue}')</script>
+				<script xsl:expand-text="yes">initDP('#datepicker{position()}', '{$currentValue}','{normalize-space($datepicker-options)}')</script>
 			</td>
 		</tr>
 	</xsl:template>

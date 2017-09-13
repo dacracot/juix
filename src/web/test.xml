@@ -2,5 +2,5 @@
 <data>
 	<name first="David" middle="Craig" last="Cothren"/>
 	<phone area="209" prefix="640" number="8046"/>
-	<date month="7" day="17" year="1961"/>
+	<juix-datepicker month="7" day="17" year="1961"/>
 </data>

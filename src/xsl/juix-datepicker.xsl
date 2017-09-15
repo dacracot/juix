@@ -5,15 +5,20 @@
 	<xsl:output method="html" indent="yes"/>
 <!-- =========================================================================================== -->
 	<xsl:template match="juix-datepicker">
-		<xsl:param name="datepicker-options"/>
-		<tr>
-			<td>Date:</td>
-			<td>
-				<xsl:variable name="currentValue" select="string-join((@month, @day, @year), '/')"/>
-				<input type="text" id="datepicker{position()}"/>
-				<script xsl:expand-text="yes">initDP('#datepicker{position()}', '{$currentValue}','{normalize-space($datepicker-options)}')</script>
-			</td>
-		</tr>
+		<!-- =================================================================================== -->
+		<xsl:variable name="current-value" select="string-join((@month, @day, @year), '/')"/>
+		<xsl:variable name="datepicker-options" select="normalize-space(@options)"/>
+		<xsl:variable name="input-id">datepicker-<xsl:value-of select="position()"/></xsl:variable>
+		<xsl:element name="label">
+			<xsl:attribute name="for"><xsl:value-of select="$input-id"/></xsl:attribute>
+			<xsl:value-of select="@label"/>
+		</xsl:element>
+		<xsl:element name="input">
+			<xsl:attribute name="type">text</xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of select="$input-id"/></xsl:attribute>
+		</xsl:element>
+		<script xsl:expand-text="yes">initDP('#{$input-id}', '{$current-value}','{$datepicker-options}')</script>
+		<!-- =================================================================================== -->
 	</xsl:template>
 <!-- =========================================================================================== -->
 </xsl:stylesheet> 

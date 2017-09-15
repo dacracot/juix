@@ -16,15 +16,13 @@
 				</tr>
 				<xsl:apply-templates select="data/name"/>
 				<xsl:apply-templates select="data/phone"/>
-				<xsl:apply-templates select="data/juix-datepicker">
-					<xsl:with-param name="datepicker-options">
-						{
-						"showOtherMonths":true,
-						"changeMonth":true,
-						"changeYear":true
-						}
-					</xsl:with-param>
-				</xsl:apply-templates>
+				<tr>
+					<td colspan="2">
+						<span class="pretty">
+							<xsl:apply-templates select="data/juix-datepicker"/>
+						</span>
+					</td>
+				</tr>
 			</table>
 		</xsl:result-document>
 		<xsl:result-document href="#footer">

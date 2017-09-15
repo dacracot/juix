@@ -2,16 +2,16 @@
 <package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" expiry="2017-10-12" version="20" packageVersion="1" saxonVersion="9.8.0.3" target="JS" relocatable="false">
  <co id="0" binds="0 0 0">
   <mode onNo="TC" flags="dW" patternSlots="0">
-   <templateRule prec="0" prio="-0.5" seq="1" rank="0" minImp="0" slots="0" flags="s" line="8" module="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl">
+   <templateRule prec="0" prio="-0.5" seq="1" rank="0" minImp="0" slots="0" flags="s" line="8" module="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl">
     <p.nodeTest role="match" test="document-node()" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11);"/>
-    <sequence role="action" baseUri="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="9">
-     <resultDoc global="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;">
+    <sequence role="action" baseUri="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="9">
+     <resultDoc global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
       <str role="href" val="#header"/>
       <elem role="content" name="hr" namespaces="js">
        <empty/>
       </elem>
      </resultDoc>
-     <resultDoc line="12" global="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;">
+     <resultDoc line="12" global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
       <str role="href" val="#editor"/>
       <elem role="content" line="13" name="table" namespaces="js">
        <sequence>
@@ -47,23 +47,32 @@
           <axis name="child" nodeTest="element(Q{}phone)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='phone';"/>
          </slash>
         </applyT>
-        <applyT line="19" bSlot="2">
-         <slash role="select">
-          <axis name="child" nodeTest="element(Q{}data)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='data';"/>
-          <axis name="child" nodeTest="element(Q{}juix-datepicker)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='juix-datepicker';"/>
-         </slash>
-         <withParam name="datepicker-options" as="document-node()">
-          <doc line="20" base="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl" flags="t" text="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;showOtherMonths&#34;:true,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;changeMonth&#34;:true,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;changeYear&#34;:true&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;" validation="preserve">
-           <valueOf flags="l">
-            <str val="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;showOtherMonths&#34;:true,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;changeMonth&#34;:true,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#34;changeYear&#34;:true&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
-           </valueOf>
-          </doc>
-         </withParam>
-        </applyT>
+        <elem line="20" name="tr" flags="l">
+         <elem name="td" flags="l">
+          <sequence>
+           <att name="colspan" flags="l">
+            <str val="2"/>
+           </att>
+           <elem line="21" name="span" flags="l" namespaces="js">
+            <sequence>
+             <att name="class" flags="l">
+              <str val="pretty"/>
+             </att>
+             <applyT line="22" bSlot="2">
+              <slash role="select">
+               <axis name="child" nodeTest="element(Q{}data)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='data';"/>
+               <axis name="child" nodeTest="element(Q{}juix-datepicker)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='juix-datepicker';"/>
+              </slash>
+             </applyT>
+            </sequence>
+           </elem>
+          </sequence>
+         </elem>
+        </elem>
        </sequence>
       </elem>
      </resultDoc>
-     <resultDoc line="30" global="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Tue Sep 12 15:04:23 PDT 2017&#xA;">
+     <resultDoc line="28" global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
       <str role="href" val="#footer"/>
       <elem role="content" name="hr" namespaces="js">
        <empty/>
@@ -71,85 +80,86 @@
      </resultDoc>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="0" rank="1" minImp="0" slots="1" flags="s" line="7" module="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/juix-datepicker.xsl">
+   <templateRule prec="0" prio="0.0" seq="0" rank="1" minImp="0" slots="1" flags="s" line="7" module="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/juix-datepicker.xsl">
     <p.nodeTest role="match" test="element(Q{}juix-datepicker)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='juix-datepicker';"/>
-    <sequence role="action" baseUri="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/juix-datepicker.xsl" ns="xsl=~ js=~" line="8">
-     <param name="datepicker-options" slot="0">
-      <str role="select" val=""/>
-      <supplied role="conversion" slot="0"/>
-     </param>
-     <elem line="10" name="tr" namespaces="js">
-      <sequence>
-       <elem name="td" flags="l">
-        <valueOf flags="Sl">
-         <str val="Date:"/>
+    <let role="action" baseUri="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/juix-datepicker.xsl" ns="xsl=~ js=~" line="11" var="input-id" as="xs:untypedAtomic" slot="0" eval="7">
+     <cast as="xs:untypedAtomic" emptiable="0">
+      <fn name="string-join">
+       <sequence>
+        <atomic val="datepicker-" type="xs:untypedAtomic"/>
+        <convert from="xs:integer" to="xs:untypedAtomic">
+         <fn name="position"/>
+        </convert>
+       </sequence>
+       <str val=""/>
+      </fn>
+     </cast>
+     <sequence line="13">
+      <elem name="label">
+       <sequence>
+        <att name="for" flags="l">
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <varRef name="input-id" slot="0"/>
+         </convert>
+        </att>
+        <valueOf line="14" flags="l">
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <attVal name="Q{}label" chk="0"/>
+         </convert>
         </valueOf>
-       </elem>
-       <elem line="12" name="td" flags="l">
-        <sequence line="13">
-         <elem name="input" flags="l">
+       </sequence>
+      </elem>
+      <elem line="18" name="input">
+       <sequence>
+        <att name="type" flags="l">
+         <str val="text"/>
+        </att>
+        <att name="id" flags="l">
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <varRef name="input-id" slot="0"/>
+         </convert>
+        </att>
+       </sequence>
+      </elem>
+      <elem line="20" name="script" namespaces="js">
+       <valueOf flags="el">
+        <fn name="concat">
+         <str val="initDP('#"/>
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <varRef name="input-id" slot="0"/>
+         </convert>
+         <str val="', '"/>
+         <fn line="9" name="string-join">
           <sequence>
-           <att name="type" flags="l">
-            <str val="text"/>
-           </att>
-           <att name="id" flags="l">
-            <fn name="concat">
-             <str val="datepicker"/>
-             <convert from="xs:integer" to="xs:string">
-              <fn name="position"/>
-             </convert>
-            </fn>
-           </att>
+           <attVal name="Q{}month" chk="0"/>
+           <attVal name="Q{}day" chk="0"/>
+           <attVal name="Q{}year" chk="0"/>
           </sequence>
-         </elem>
-         <elem line="14" name="script" flags="l">
-          <valueOf flags="el">
-           <fn name="concat">
-            <str val="initDP('#datepicker"/>
-            <convert from="xs:integer" to="xs:string">
-             <fn name="position"/>
-            </convert>
-            <str val="', '"/>
-            <fn line="12" name="string-join">
-             <sequence>
-              <attVal name="Q{}month" chk="0"/>
-              <attVal name="Q{}day" chk="0"/>
-              <attVal name="Q{}year" chk="0"/>
-             </sequence>
-             <str val="/"/>
-            </fn>
-            <str val="','"/>
-            <fn name="normalize-space">
-             <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||fn:normalize-space">
-              <check card="?" diag="0|0||fn:normalize-space">
-               <cvUntyped to="xs:string">
-                <data>
-                 <varRef name="datepicker-options" slot="0"/>
-                </data>
-               </cvUntyped>
-              </check>
-             </treat>
-            </fn>
-            <str val="')"/>
-           </fn>
-          </valueOf>
-         </elem>
-        </sequence>
-       </elem>
-      </sequence>
-     </elem>
-    </sequence>
+          <str val="/"/>
+         </fn>
+         <str val="','"/>
+         <fn line="10" name="normalize-space">
+          <cvUntyped to="xs:string">
+           <attVal name="Q{}options" chk="0"/>
+          </cvUntyped>
+         </fn>
+         <str val="')"/>
+        </fn>
+       </valueOf>
+      </elem>
+     </sequence>
+    </let>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="1" minImp="0" slots="0" flags="s" line="35" module="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl">
+   <templateRule prec="0" prio="0.0" seq="2" rank="1" minImp="0" slots="0" flags="s" line="33" module="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl">
     <p.nodeTest role="match" test="element(Q{}name)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='name';"/>
-    <elem role="action" baseUri="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="37" name="tr" namespaces="js">
+    <elem role="action" baseUri="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="35" name="tr" namespaces="js">
      <sequence>
       <elem name="td" flags="l">
        <valueOf flags="Sl">
         <str val="Name:"/>
        </valueOf>
       </elem>
-      <elem line="39" name="td" flags="l">
+      <elem line="37" name="td" flags="l">
        <valueOf flags="l">
         <fn name="string-join">
          <sequence>
@@ -164,16 +174,16 @@
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="3" rank="1" minImp="0" slots="0" flags="s" line="44" module="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl">
+   <templateRule prec="0" prio="0.0" seq="3" rank="1" minImp="0" slots="0" flags="s" line="42" module="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl">
     <p.nodeTest role="match" test="element(Q{}phone)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType===1 &amp;&amp; q.uri===''&amp;&amp;q.local==='phone';"/>
-    <elem role="action" baseUri="file:/Users/cothren2/Desktop/testing%20the%20juice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="46" name="tr" namespaces="js">
+    <elem role="action" baseUri="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="44" name="tr" namespaces="js">
      <sequence>
       <elem name="td" flags="l">
        <valueOf flags="Sl">
         <str val="Phone:"/>
        </valueOf>
       </elem>
-      <elem line="48" name="td" flags="l">
+      <elem line="46" name="td" flags="l">
        <sequence>
         <valueOf flags="Sl">
          <str val="("/>
@@ -186,7 +196,7 @@
         <valueOf flags="Sl">
          <str val=")"/>
         </valueOf>
-        <valueOf line="49" flags="l">
+        <valueOf line="47" flags="l">
          <convert from="xs:untypedAtomic" to="xs:string">
           <attVal name="Q{}prefix" chk="0"/>
          </convert>
@@ -194,7 +204,7 @@
         <valueOf flags="Sl">
          <str val="-"/>
         </valueOf>
-        <valueOf line="50" flags="l">
+        <valueOf line="48" flags="l">
          <convert from="xs:untypedAtomic" to="xs:string">
           <attVal name="Q{}number" chk="0"/>
          </convert>
@@ -214,4 +224,4 @@
  </output>
  <decimalFormat/>
 </package>
-<?Σ 895b9224?>
+<?Σ fc8190f1?>

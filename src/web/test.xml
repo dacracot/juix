@@ -2,5 +2,5 @@
 <data>
 	<name first="David" middle="Craig" last="Cothren"/>
 	<phone area="209" prefix="640" number="8046"/>
-	<juix-datepicker month="7" day="17" year="1961" label="Birthday: " options="{&quot;showOtherMonths&quot;:true,&quot;changeMonth&quot;:true,&quot;changeYear&quot;:true}"/>
+	<juix-datepicker month="07" day="17" year="1961" label="Birthday: " options="{&quot;showOtherMonths&quot;:true,&quot;changeMonth&quot;:true,&quot;changeYear&quot;:true}"/>
 </data>

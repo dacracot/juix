@@ -5,13 +5,13 @@
    <templateRule prec="0" prio="-0.5" seq="1" rank="0" minImp="0" slots="0" flags="s" line="8" module="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl">
     <p.nodeTest role="match" test="document-node()" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType===9||item.nodeType===11);"/>
     <sequence role="action" baseUri="file:/Users/dacracot/Desktop/TestingTheJuice/juix/src/xsl/test.xsl" ns="xsl=~ js=~" line="9">
-     <resultDoc global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
+     <resultDoc global="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;">
       <str role="href" val="#header"/>
       <elem role="content" name="hr" namespaces="js">
        <empty/>
       </elem>
      </resultDoc>
-     <resultDoc line="12" global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
+     <resultDoc line="12" global="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;">
       <str role="href" val="#editor"/>
       <elem role="content" line="13" name="table" namespaces="js">
        <sequence>
@@ -72,7 +72,7 @@
        </sequence>
       </elem>
      </resultDoc>
-     <resultDoc line="28" global="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Thu Sep 14 20:57:18 PDT 2017&#xA;">
+     <resultDoc line="28" global="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;indent=yes&#xA;method=html&#xA;" local="#&#xA;#Sun Sep 17 13:00:30 PDT 2017&#xA;">
       <str role="href" val="#footer"/>
       <elem role="content" name="hr" namespaces="js">
        <empty/>
@@ -124,7 +124,7 @@
       <elem line="20" name="script" namespaces="js">
        <valueOf flags="el">
         <fn name="concat">
-         <str val="initDP('#"/>
+         <str val="juixDatepickerInit('#"/>
          <convert from="xs:untypedAtomic" to="xs:string">
           <varRef name="input-id" slot="0"/>
          </convert>
@@ -224,4 +224,4 @@
  </output>
  <decimalFormat/>
 </package>
-<?Σ fc8190f1?>
+<?Σ 954de321?>

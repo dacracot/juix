@@ -17,7 +17,7 @@
 			<xsl:attribute name="type">text</xsl:attribute>
 			<xsl:attribute name="id"><xsl:value-of select="$input-id"/></xsl:attribute>
 		</xsl:element>
-		<script xsl:expand-text="yes">initDP('#{$input-id}', '{$current-value}','{$datepicker-options}')</script>
+		<script xsl:expand-text="yes">juixDatepickerInit('#{$input-id}', '{$current-value}','{$datepicker-options}')</script>
 		<!-- =================================================================================== -->
 	</xsl:template>
 <!-- =========================================================================================== -->
